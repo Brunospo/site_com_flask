@@ -4,6 +4,8 @@ app = Flask(__name__)
 
 lista_usuarios = ['lira', 'Alon', 'Alessandra', 'Bia']
 
+token = 'REMOVIDO'
+
 @app.route("/")
 def home():
     return render_template('home.html')
