@@ -1,10 +1,10 @@
-from main import app, database
-from models import Usuario, Post
+from comunidadeImpressionadora import app, database
+from comunidadeImpressionadora.models import Usuario, Post
 
 with app.app_context(): # Todos os codigos tem que ter esse contexto
 
 # ---------------------------Criar Banco de Dados---------------------------------------
-  database. create_all()
+  # database.create_all()
 
 # ---------------------------criar usuario---------------------------------------
 #   usuario = Usuario(username="Lira", email="lira@gmail.com", senha="123456")
@@ -14,8 +14,8 @@ with app.app_context(): # Todos os codigos tem que ter esse contexto
 #   database. session. commit()
 
 # ---------------------------Buscar usuario---------------------------------------
-  # meus_usuarios = Usuario.query.all()
-  # print(meus_usuarios[0].posts)
+  meus_usuarios = Usuario.query.all()
+  print(meus_usuarios)
 
 # ---------------------------Buscar usuario com where---------------------------------------
 #   meu_usuario = Usuario.query.filter_by(id=2).first()
